@@ -9,7 +9,7 @@ function jsonp(opations){
 	cbName=cbName.replace('.','');//函数名不可含有点
 	opations.data[opations.callback]=cbName;
 	
-	//2.定义回调函数
+	//定义回调函数
 	window[opations.data[opations.callback]]=function(json){
 		clearTimeout(timer);
 		opations.success && opations.success(json);
